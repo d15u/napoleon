@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Napoleon - Cele mai bune preturi pentru livrare de mancare</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/favicon/android-chrome-512x512.png">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Banner -->
+    <div class="banner">
+        <picture>
+            <source media="(min-width: 1024px)" srcset="images/banner/pizza-1+1-1200x180.png">
+            <source media="(min-width: 768px)" srcset="images/banner/pizza-1+1-768x150.png">
+            <img src="images/banner/pizza-1+1-375x120.png" alt="Special offer banner" class="banner-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        </picture>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="logo-container">
+                    <img src="images/LOGO EPS_MARK.png" alt="Napoleon Logo" class="logo-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                </div>
+                <div class="motto">
+                    <span>Cucereste foamea!</span>
+                </div>
+            </div>
+            <div class="nav-right">
+                <button class="download-btn" id="downloadBtn">
+                    <span class="download-icon">📱</span>
+                    <div class="download-text">
+                        <small>Descarca de pe</small>
+                        <strong class="store-name">App Store</strong>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Headline Section -->
+        <section class="headline-section">
+            <h1 class="headline">De ce sa platesti mai mult pentru comanda ta?</h1>
+            <p class="sub-headline">
+                Pe toate aplicatiile de livrare platesti mai mult. Pe aplicatia Napoleon platesti acelasi pret ca in restaurant. Si nu ai plata de livrare. Totul pe telefonul tau
+            </p>
+        </section>
+
+        <!-- Visual Section -->
+        <section class="visual-section">
+            <div class="phone-mockup">
+                <div class="phone-frame">
+                    <div class="phone-screen">
+                        <img src="images/app-screenshot.png" alt="Napoleon app screenshot" class="screenshot-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="screenshot-placeholder" style="display: none;">
+                            <span>iPhone Screenshot</span>
+                            <small>Recommended size: 375x812px</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <button class="primary-cta">Vreau preturi mai bune</button>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <h2 class="testimonials-title">Ce spun clientii nostri</h2>
+            <div class="testimonials-carousel">
+                <div class="carousel-container">
+                    <div class="testimonial-slide active">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"Aceasta aplicatie m-a ajutat sa economisesc mult! Nu mai platesti taxe de livrare si preturile in restaurant sunt exact la fel."</p>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <span>👤</span>
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Ana M.</h4>
+                                        <span>Client verificat</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"Acum, o aplicatie care nu supraevalueaza! Imi place cum este pretul transparent."</p>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <span>👤</span>
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Mihai B.</h4>
+                                        <span>Client verificat</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"Cel mai bun aplicatie de livrare de mancare pe care am folosit-o. Preturi fair si serviciu grozav!"</p>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <span>👤</span>
+                                    </div>
+                                    <div class="author-info">
+                                            <h4>Andreea P.</h4>
+                                        <span>Client verificat</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev-btn" onclick="changeSlide(-1)">‹</button>
+                    <div class="carousel-dots">
+                        <span class="dot active" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                    <button class="carousel-btn next-btn" onclick="changeSlide(1)">›</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
