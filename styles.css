@@ -250,30 +250,20 @@ body {
 .phone-frame {
     width: 200px;
     height: 400px;
-    background-color: #1a1a1a;
-    border-radius: 25px;
-    padding: 15px;
-    box-shadow: 0 20px 40px rgba(17, 28, 78, 0.2);
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
     position: relative;
 }
 
-.phone-frame::before {
-    content: '';
-    position: absolute;
-    top: 8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 4px;
-    background-color: #333;
-    border-radius: 2px;
-}
+.phone-frame::before { content: none; }
 
 .phone-screen {
     width: 100%;
     height: 100%;
-    background-color: var(--light-blue);
-    border-radius: 15px;
+    background-color: transparent;
+    border-radius: 0;
     overflow: hidden;
     position: relative;
 }
@@ -282,7 +272,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 0;
 }
 
 .screenshot-placeholder {
