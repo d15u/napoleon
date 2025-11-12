@@ -48,6 +48,18 @@ function currentSlide(index) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const sidebarNav = document.getElementById('sidebarNav');
+    if (hamburgerBtn && sidebarNav) {
+        hamburgerBtn.addEventListener('click', function() {
+            const isOpen = sidebarNav.classList.toggle('is-open');
+            this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            document.body.classList.toggle('menu-open', isOpen);
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
     const ctaButton = document.querySelector('.primary-cta');
     
     if (ctaButton) {

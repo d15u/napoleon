@@ -18,17 +18,14 @@
 <body>
     <!-- Banner -->
     <div class="banner">
-        <picture>
-            <source media="(min-width: 1024px)" srcset="images/banner/pizza-1+1-1200x180.png">
-            <source media="(min-width: 768px)" srcset="images/banner/pizza-1+1-768x150.png">
-            <source media="(min-width: 768px)" srcset="images/banner/pizza-1+1-700x224.png">
-            <source media="(min-width: 768px)" srcset="images/banner/pizza-1+1-1200x234.png">
-            <img src="images/banner/pizza-1+1-375x120.png" alt="Special offer banner" class="banner-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        </picture>
+        <div class="banner-content">
+            <div class="banner-text">Preturi corecte. Fara taxa de livrare.</div>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="sidebarNav">☰</button>
+        </div>
     </div>
 
     <!-- Navbar -->
-    <nav class="navbar">
+    <nav class="navbar" id="sidebarNav">
         <div class="nav-container">
             <div class="nav-left">
                 <div class="logo-container">
