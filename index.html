@@ -14,38 +14,32 @@
     
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1526459031726038');
+        fbq('track', 'PageView');
+    </script>
 </head>
 <body>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1526459031726038&ev=PageView&noscript=1"
+    /></noscript>
+
     <!-- Banner -->
     <div class="banner">
         <div class="banner-content">
             <div class="banner-text">Preturi corecte. Fara taxa de livrare.</div>
-            <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="sidebarNav">☰</button>
         </div>
     </div>
-
-    <!-- Navbar -->
-    <nav class="navbar" id="sidebarNav">
-        <div class="nav-container">
-            <div class="nav-left">
-                <div class="logo-container">
-                    <img src="images/LOGO EPS_MARK.png" alt="Napoleon Logo" class="logo-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                </div>
-                <div class="motto">
-                    <span>Cucereste foamea!</span>
-                </div>
-            </div>
-            <div class="nav-right">
-                <button class="download-btn" id="downloadBtn">
-                    <span class="download-icon">📱</span>
-                    <div class="download-text">
-                        <small>Descarca de pe</small>
-                        <strong class="store-name">App Store</strong>
-                    </div>
-                </button>
-            </div>
-        </div>
-    </nav>
 
     <!-- Main Content -->
     <main class="main-content">

@@ -11,7 +11,6 @@ body {
     color: #111c4e;
     background-color: #ffffff;
     overflow-x: hidden;
-    padding-left: var(--sidebar-w); /* sidebar width */
     padding-top: 40px; /* match fixed banner height */
 }
 
@@ -21,7 +20,6 @@ body {
     --red: #ec2d1f;
     --light-blue: #eaf6f7;
     --white: #ffffff;
-    --sidebar-w: 140px;
 }
 
 /* Banner */
@@ -51,23 +49,11 @@ body {
     justify-content: center;
 }
 
-.hamburger {
-    position: absolute;
-    left: 8px;
-    top: 6px;
-    background: transparent;
-    border: none;
-    color: var(--white);
-    font-size: 20px;
-    line-height: 1;
-    cursor: pointer;
-    display: none; /* hidden by default, show on mobile */
-}
 
 .banner-text {
     color: var(--white);
     font-weight: 600;
-    font-size: 18px;
+    font-size: 14px;
     margin-bottom: 0;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -108,162 +94,25 @@ body {
     opacity: 0.9;
 }
 
-/* Navbar */
-.navbar {
-    background-color: var(--white);
-    padding: 16px;
-    border-right: 1px solid var(--light-blue);
-    position: fixed;
-    top: 40px; /* below fixed banner */
-    left: 0;
-    height: calc(100vh - 40px);
-    width: var(--sidebar-w);
-    z-index: 200;
-}
-
-.nav-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    height: 100%;
-    max-width: none;
-    margin: 0;
-}
-
-.nav-left {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.logo-image {
-    height: 40px;
-    width: auto;
-    max-width: 120px;
-    object-fit: contain;
-}
-
-.logo-placeholder {
-    background-color: var(--light-blue);
-    border: 2px dashed var(--blue);
-    border-radius: 8px;
-    padding: 12px 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 120px;
-}
-
-.logo-placeholder span {
-    font-weight: 600;
-    font-size: 14px;
-    color: var(--blue);
-}
-
-.logo-placeholder small {
-    font-size: 8px;
-    color: var(--blue);
-    opacity: 0.7;
-}
-
-.motto {
-    font-size: 12px;
-    color: var(--blue);
-    opacity: 0.8;
-    font-style: italic;
-}
-
-.nav-right {
-    display: flex;
-    gap: 8px;
-    margin-top: auto;
-}
-
-.download-btn {
-    background-color: var(--blue);
-    color: var(--white);
-    border: none;
-    border-radius: 8px;
-    padding: 8px 12px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    min-width: 100px;
-}
-
-.download-btn:hover {
-    background-color: #0d1540;
-    transform: translateY(-1px);
-}
-
-.download-btn .download-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.download-btn small {
-    font-size: 8px;
-    opacity: 0.8;
-}
-
-.download-btn strong {
-    font-size: 10px;
-    font-weight: 600;
-}
-
-.download-icon {
-    font-size: 14px;
-}
-
 /* Main Content */
 .main-content {
     padding: 0 16px;
     max-width: 1200px;
     margin: 0 auto;
-    transform: translateX(calc(-0.5 * var(--sidebar-w)));
 }
 
-/* Mobile fix: avoid content sliding under sidebar */
+/* Mobile fix */
 @media (max-width: 767px) {
-    .main-content {
-        transform: none;
-    }
-    body {
-        padding-left: 0; /* center content when sidebar collapsed */
-    }
-    body.menu-open {
-        padding-left: var(--sidebar-w); /* shift when sidebar is open */
-    }
     .visual-section {
         padding-left: 0;
         padding-right: 0;
-    }
-    .hamburger { display: block; }
-    /* collapse sidebar off-canvas */
-    .navbar {
-        transform: translateX(calc(-1 * var(--sidebar-w)));
-        transition: transform 0.3s ease;
-    }
-    .navbar.is-open {
-        transform: translateX(0);
     }
 }
 
 /* Headline Section */
 .headline-section {
     text-align: center;
-    padding: 20px 0 12px;
+    padding: 40px 0 12px;
 }
 
 .headline {
@@ -296,8 +145,8 @@ body {
 }
 
 .phone-frame {
-    width: 200px;
-    height: 400px;
+    width: 150px;
+    height: 300px;
     background-color: transparent;
     border-radius: 0;
     padding: 0;
@@ -508,7 +357,6 @@ body {
 /* Responsive Design */
 @media (min-width: 768px) {
     body {
-        padding-left: 200px;
         padding-top: 56px;
     }
     .banner {
@@ -516,46 +364,11 @@ body {
     }
     
     .banner-text {
-        font-size: 22px;
-    }
-    
-    .navbar {
-        top: 56px;
-        height: calc(100vh - 56px);
-        width: 180px;
-        padding: 20px 12px;
-    }
-    
-    .nav-container {
-        gap: 24px;
-    }
-    
-    .logo-image {
-        height: 50px;
-        max-width: 140px;
-    }
-    
-    .logo-placeholder {
-        min-width: 140px;
-        padding: 14px 18px;
-    }
-    
-    .logo-placeholder span {
         font-size: 16px;
     }
     
-    .motto {
-        font-size: 14px;
-    }
-    
-    .download-btn {
-        padding: 12px 16px;
-        font-size: 12px;
-        min-width: 120px;
-    }
-    
-    .download-btn strong {
-        font-size: 12px;
+    .headline-section {
+        padding: 50px 0 12px;
     }
     
     .main-content {
@@ -571,8 +384,8 @@ body {
     }
     
     .phone-frame {
-        width: 250px;
-        height: 500px;
+        width: 200px;
+        height: 400px;
     }
     
     .primary-cta {
@@ -601,7 +414,6 @@ body {
 
 @media (min-width: 1024px) {
     body {
-        padding-left: 200px;
         padding-top: 64px;
     }
     .banner {
@@ -609,28 +421,11 @@ body {
     }
     
     .banner-text {
-        font-size: 26px;
-    }
-    
-    .navbar {
-        top: 64px;
-        height: calc(100vh - 64px);
-        width: 200px;
-        padding: 24px 12px;
-    }
-    
-    .logo-image {
-        height: 60px;
-        max-width: 160px;
-    }
-    
-    .logo-placeholder {
-        min-width: 160px;
-        padding: 16px 20px;
-    }
-    
-    .logo-placeholder span {
         font-size: 18px;
+    }
+    
+    .headline-section {
+        padding: 60px 0 12px;
     }
     
     .main-content {
@@ -646,8 +441,8 @@ body {
     }
     
     .phone-frame {
-        width: 300px;
-        height: 600px;
+        width: 250px;
+        height: 500px;
     }
     
     .testimonials-section {

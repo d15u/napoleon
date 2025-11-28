@@ -48,18 +48,6 @@ function currentSlide(index) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const sidebarNav = document.getElementById('sidebarNav');
-    if (hamburgerBtn && sidebarNav) {
-        hamburgerBtn.addEventListener('click', function() {
-            const isOpen = sidebarNav.classList.toggle('is-open');
-            this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-            document.body.classList.toggle('menu-open', isOpen);
-        });
-    }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
     const ctaButton = document.querySelector('.primary-cta');
     
     if (ctaButton) {
@@ -76,63 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('CTA button clicked - ready for app store integration');
         });
     }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const downloadBtn = document.getElementById('downloadBtn');
-    const storeNameElement = document.querySelector('.store-name');
-    const downloadIcon = document.querySelector('.download-icon');
-    
-    function detectDevice() {
-        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-        
-        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-            return 'ios';
-        }
-        
-        if (/android/i.test(userAgent)) {
-            return 'android';
-        }
-        
-        return 'ios';
-    }
-    
-    const appUrls = {
-        ios: 'napoleon%2Fid6472780083',
-        android: 'com.inmobito.napoleonapp'
-    };
-    
-    function initializeDownloadButton() {
-        const device = detectDevice();
-        
-        if (device === 'android') {
-            storeNameElement.textContent = 'Play Store';
-        } else {
-            storeNameElement.textContent = 'App Store';
-        }
-    }
-    
-    if (downloadBtn) {
-        downloadBtn.addEventListener('click', function() {
-            const device = detectDevice();
-            const url = appUrls[device];
-            
-            this.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                this.style.transform = '';
-            }, 150);
-            
-            if (url) {
-                window.open(url, '_blank');
-                console.log(`Opening ${device} app store: ${url}`);
-            } else {
-                console.log(`No URL configured for ${device} device`);
-                alert(`Please search for "Napoleon" in your device's app store`);
-            }
-        });
-    }
-    
-    initializeDownloadButton();
 });
 
 function addImageLoadingEffect(placeholder) {
